@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db-shoppy:
+    image: postgres
+    container_name: db-shoppy
+    env_file: .env
+  web-shoppy:
+    build: .
+    container_name: web-shoppy
+    command: bundle exec "rails s -b 0.0.0.0"
+    env_file: .env
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/webapp
+    links:
+      - db-shoppy
