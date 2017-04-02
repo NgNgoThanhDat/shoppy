@@ -6,6 +6,7 @@
 <table class="stack hover">
   <tbody>
     <% @products.each do |product| %>
+      <!-- cycle: để check xem row đó là chẵn hay lẻ -->
       <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
         <td><%= image_tag(product.image_url, class: "list-image") %></td>
         <td class="list-description">
