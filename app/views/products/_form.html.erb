@@ -1,0 +1,70 @@
+<%= form_for @product do |f| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="small-5">
+      <div class="row">
+        <div class="small-3 columns">
+          <%= f.label :title, class: "text-right middle" %>
+        </div>
+        <div class="small-9 columns">
+          <%= f.text_field :title %>
+        </div>
+      </div>
+    </div>
+
+    <div class="small-5">
+      <div class="row">
+        <div class="small-3 columns">
+          <%= f.label :description, class: "text-right middle" %>
+        </div>
+        <div class="small-9 columns">
+          <%= f.text_area :description %>
+        </div>
+      </div>
+    </div>
+
+    <div class="small-5">
+      <div class="row">
+        <div class="small-3 columns">
+          <%= f.label :image_url, class: "text-right middle" %>
+        </div>
+        <div class="small-9 columns">
+          <%= f.text_field :image_url %>
+        </div>
+      </div>
+    </div>
+
+    <div class="small-5">
+      <div class="row">
+        <div class="small-3 columns">
+          <%= f.label :price, class: "text-right middle" %>
+        </div>
+        <div class="small-9 columns">
+          <%= f.text_field :price %>
+        </div>
+      </div>
+    </div>
+
+    <div class="small-5">
+      <div class="row">
+        <div class="small-3 columns">
+        </div>
+        <div class="small-9 columns">
+          <%= f.submit class: "button primary hollow"%>
+          <%= link_to 'Cancel', products_path, class: "button alert" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
