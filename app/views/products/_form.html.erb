@@ -18,7 +18,7 @@
           <%= f.label :title, class: "text-right middle" %>
         </div>
         <div class="small-9 columns">
-          <%= f.text_field :title %>
+          <%= f.text_field :title, placeholder: "Title" %>
         </div>
       </div>
     </div>
@@ -29,7 +29,7 @@
           <%= f.label :description, class: "text-right middle" %>
         </div>
         <div class="small-9 columns">
-          <%= f.text_area :description %>
+          <%= f.text_area :description, rows: 10, cols: 60, placeholder: "Description" %>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@
           <%= f.label :image_url, class: "text-right middle" %>
         </div>
         <div class="small-9 columns">
-          <%= f.text_field :image_url %>
+          <%= f.text_field :image_url, placeholder: "Image path" %>
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@
           <%= f.label :price, class: "text-right middle" %>
         </div>
         <div class="small-9 columns">
-          <%= f.text_field :price %>
+          <%= f.text_field :price, placeholder: "Price for your product" %>
         </div>
       </div>
     </div>

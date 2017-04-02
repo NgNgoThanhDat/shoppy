@@ -24,6 +24,9 @@ gem 'therubyracer', platforms: :ruby
 #Foundation::Rails is a gem that makes it super easy to use Foundation in your upcoming Rails project.
 gem 'foundation-rails'
 
+#A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
