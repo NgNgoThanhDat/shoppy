@@ -3,16 +3,21 @@
 <h2>Your Pragmatic Catalog</h2>
 
 <% @products.each do |product| %>
-<div class="row small-up-2 medium-up-3 large-up-4">
-  <div class="column column-block">
-    <%= image_tag(product.image_url) %>
-  </div>
-  <div class="columns">
-    <h4><%= product.title %></h4>
-    <%= sanitize(product.description) %>
-    <div class="price-line">
-      <span class="price"><%= product.price %></span>
+<div class="row">
+  <div class="small-10 columns">
+    <div class="row">
+      <div class="small-3 columns">
+        <%= image_tag(product.image_url) %>
+      </div>
+      <div class="small-9 columns">
+        <h4><%= product.title %></h4>
+        <%= sanitize(product.description) %>
+        <div class="price-line">
+          <span class="price"><%= product.price %></span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<hr>
 <% end %>
