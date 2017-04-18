@@ -12,6 +12,7 @@
   max-height: 300px;
 }
 
+//Catelog - Sidebar
 .product-filters {
   padding: 0.5rem 1.5rem;
   background-color: $white;
@@ -65,4 +66,25 @@
 
 .mobile-product-filters {
   border-bottom: 1px solid $light-gray;
+}
+//End catelog - sidebar
+
+
+//Price
+.price-line {
+  margin-top: 10px;
+}
+
+#price {
+  // margin-top: 9px;
+  margin: 4px;
+  padding: 4px;
+}
+
+//End price
+
+
+//Cart
+#cart-button {
+  margin-right: 345px;
 }
