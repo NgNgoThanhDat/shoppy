@@ -1,3 +1,18 @@
 // Place all the styles related to the Carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cart-show-button {
+    position: absolute;
+    right: 0px;
+    width: 322px;
+    padding: 10px;
+}
+
+#tr-cart-show-name {
+  font-size: 16pt;
+}
+
+#tr-cart-show-content, #tr-cart-show-name {
+  text-align: center;
+}
