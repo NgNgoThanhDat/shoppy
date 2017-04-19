@@ -35,6 +35,9 @@
   </div>
 
   <div class="container" style="margin-top: 10px">
+    <div id="cart">
+      <%= render current_cart %>
+    </div>
     <div class="row">
       <div class="small-3 columns">
         <div class="product-filters">
@@ -172,7 +175,7 @@
       <div class="small-9 columns">
         <%= yield %>
       </div>
-    </div> 
+    </div>
   </div>
 </body>
 </html>
