@@ -79,3 +79,15 @@ $background: #cc4b37;
   @include form-input-error;
   display: table;
 }
+
+#top-bar-line {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #D6DAC2;
+  margin: 10px;
+}
+
+.cart-bar {
+  margin: 25px 5px 5px 5px;
+  padding: 25px;
+  border-bottom: 1px solid #D6DAC2;
+}

@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title><%= content_for?(:title) ? yield(:title) : "Shoppy" %></title>
 
   <%= stylesheet_link_tag    "application" %>
@@ -12,7 +11,7 @@
 </head>
 
 <body class="<%= controller.controller_name %>">
-  <div class="top-bar">
+  <div class="top-bar stacked-for-medium" id="top-bar-line">
     <div class="top-bar-title">
       <strong>Site title</strong>
     </div>
@@ -27,17 +26,36 @@
       </div>
       <div class="top-bar-right">
         <ul class="menu">
-          <li><input type="search" placeholder="Search"></li>
-          <li><button type="button" class="button">Search</button></li>
+          <li>login</li>
+          <li>signup</li>
         </ul>
       </div>
     </div>
   </div>
 
   <div class="container" style="margin-top: 10px">
-    <div id="cart">
-      <%= render current_cart %>
+    <div class="cart-bar">
+      <div class="row">
+        <div class="small-3 columns">
+          <h3>LOGO</h3>
+        </div>
+        <div class="small-4 columns">
+          <ul class="menu">
+            <li><input type="search" placeholder="Search"></li>
+            <li><button type="button" class="button">Search</button></li>
+          </ul>
+        </div>
+        <div class="small-5 columns">
+          <!-- <h4>Cart</h4> -->
+          <div id="cart">
+            <%= hide_cart_if(current_cart.line_items.empty?, :id => "cart") do %>
+              <%= render current_cart %>
+            <% end %>
+        </div>
+        </div>
+      </div>
     </div>
+
     <div class="row">
       <div class="small-3 columns">
         <div class="product-filters">
