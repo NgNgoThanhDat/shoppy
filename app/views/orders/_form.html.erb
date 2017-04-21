@@ -1,0 +1,72 @@
+<%= form_for @order do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-content">
+    <div class="row">
+      <div class="small-5">
+        <div class="row">
+          <div class="small-3 columns">
+            <%= f.label :name, class: "text-right middle" %>
+          </div>
+          <div class="small-9 columns">
+            <%= f.text_field :name, size: 40, placeholder: "Name" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-5">
+        <div class="row">
+          <div class="small-3 columns">
+            <%= f.label :address, class: "text-right middle" %>
+          </div>
+          <div class="small-9 columns">
+            <%= f.text_area :address, rows: 3, cols: 40, placeholder: "Address" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-5">
+        <div class="row">
+          <div class="small-3 columns">
+            <%= f.label :email, size: 40, class: "text-right middle" %>
+          </div>
+          <div class="small-9 columns">
+            <%= f.text_field :email, placeholder: "Email" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-5">
+        <div class="row">
+          <div class="small-3 columns">
+            <%= f.label :pay_type, class: "text-right middle" %>
+          </div>
+          <div class="small-9 columns">
+            <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Select a payment method' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-5">
+        <div class="row">
+          <div class="small-3 columns">
+          </div>
+          <div class="small-9 columns">
+            <%= f.submit 'Place order', class: "button primary hollow"%>
+            <%= link_to 'Cancel', store_index_path, class: "button alert" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

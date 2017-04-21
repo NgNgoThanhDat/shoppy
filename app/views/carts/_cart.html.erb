@@ -17,8 +17,11 @@
       </tbody>
     </table>
   </div>
-</div>
 
-<div>
-  <%= button_to 'Empty cart', cart, method: :delete, data: {confirm: 'Are you sure?'}, class: "button alert" %>
+  <div class="small-3 columns">
+    <%= button_to 'Checkout', new_order_path, method: :get, class: "button primary hollow" %>
+  </div>
+  <div class="small-3 columns">
+    <%= button_to 'Empty cart', cart, method: :delete, data: {confirm: 'Are you sure?'}, class: "button alert" %>
+  </div>
 </div>
