@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= full_title(yield(:title)) %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -12,8 +12,11 @@
   </head>
 
   <body>
-
-    <%= yield %>
+    <div class="container row">
+      <div class="small-12 medium-12 large-12 large-centered columns">
+        <%= yield %>
+      </div>
+    </div>
 
   </body>
 </html>
