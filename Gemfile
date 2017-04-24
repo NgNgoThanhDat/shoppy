@@ -24,6 +24,9 @@ gem 'therubyracer', platforms: :ruby
 #Foundation::Rails is a gem that makes it super easy to use Foundation in your upcoming Rails project.
 gem 'foundation-rails'
 
+#The bcrypt Ruby gem provides a simple wrapper for safely handling passwords.
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
