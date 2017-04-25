@@ -2,6 +2,8 @@
 @import 'foundation';
 
 $gray-medium-light: #eaeaea;
+$danger: #F2DEDE;
+$success: #E2EED9;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -73,10 +75,18 @@ input {
   }
 }
 
-.alert-danger {
+.alert-danger, .alert-success {
+  margin-top: 10px;
   font-size: 1.6em;
   width: 100%;
   height: 50px;
-  background-color: #F2DEDE;
   text-align: center;
+}
+
+.alert-danger {
+  background-color: $danger;
+}
+
+.alert-success {
+  background-color: $success;
 }
