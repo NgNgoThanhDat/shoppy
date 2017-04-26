@@ -90,3 +90,16 @@ input {
 .alert-success {
   background-color: $success;
 }
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {    
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
