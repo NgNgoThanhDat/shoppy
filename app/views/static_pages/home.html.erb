@@ -1,2 +1,15 @@
-<h1>Sample App</h1>
-<p>This is a home page</p>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="small-4 medium-4 large-4 columns">
+      <section class="user-info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost-form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+  <h1>Sample App</h1>
+  <p>This is a home page</p>
+<% end %>

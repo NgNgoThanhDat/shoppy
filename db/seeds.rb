@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.delete_all
+Micropost.delete_all
+
 User.create!(name: "Thanh Dat", email: "datthanh.9982@gmail.com", password: "12345678")
 
 50.times do |n|
@@ -13,4 +15,10 @@ User.create!(name: "Thanh Dat", email: "datthanh.9982@gmail.com", password: "123
   email = "example-#{n+1}@gmail.com"
   password = "12345678"
   User.create!(name: name, email: email, password: password, password_confirmation: password)
+end
+
+users = User.order(:created_at).take(6)
+50.times do
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.microposts.create!(content: content) }
 end
