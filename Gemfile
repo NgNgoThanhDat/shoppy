@@ -45,6 +45,10 @@ gem 'faker'
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for modern web app frameworks and ORMs
 gem 'kaminari'
 
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
