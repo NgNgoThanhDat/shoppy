@@ -25,6 +25,12 @@ class << self
 
 end
 
+# Defines a proto-feed.
+# See "Following users" for the full implentation
+def feed
+  Micropost.where("user_id = ?", id)
+end
+
   # Remembers a user in the database for use in persistent sessions.
   def remember
     self.remember_token = User.new_token
