@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: goshoppy
+  api_key: '442184498639274'
+  api_secret: pN4wo5faLzCz-AZPSwg8Qne0lUo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: goshoppy
+  api_key: '442184498639274'
+  api_secret: pN4wo5faLzCz-AZPSwg8Qne0lUo
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: goshoppy
+  api_key: '442184498639274'
+  api_secret: pN4wo5faLzCz-AZPSwg8Qne0lUo
+  enhance_image_tag: true
+  static_image_support: false
