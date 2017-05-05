@@ -1,0 +1,28 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="small-4 medium-4 large-4 columns">
+    <section class="user-info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+        <%= render 'follow_form' if logged_in? %>
+      </h1>
+    </section>
+    <section class="stats">
+      <%= render 'shared/stats' %>
+    </section>
+  </aside>
+  <div class="small-8 medium-8 large-8 columns">
+    <div class="user-micropost">
+      <% if @user.microposts.any? %>
+        <h4>Microposts (<%= @user.microposts.count %>)</h4>
+        <ol class="microposts">
+          <%= render @microposts %>
+        </ol>
+        <div class="paginate-users">
+          <%= paginate @microposts %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

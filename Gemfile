@@ -24,6 +24,9 @@ gem 'therubyracer', platforms: :ruby
 #Foundation::Rails is a gem that makes it super easy to use Foundation in your upcoming Rails project.
 gem 'foundation-rails'
 
+#The bcrypt Ruby gem provides a simple wrapper for safely handling passwords.
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -32,8 +35,20 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+
+# A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker'
+
+# There are several pagination methods available in Rails; we’ll use one of the simplest and most robust
+# gem 'will_paginate'
+
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for modern web app frameworks and ORMs
+gem 'kaminari'
+
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+gem 'cloudinary'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
