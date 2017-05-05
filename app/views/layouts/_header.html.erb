@@ -3,6 +3,9 @@
     <ul class="menu" data-dropdown-menu>
       <li class="menu-text">Shoppy</li>
       <li><%= link_to 'Home', root_path %></li>
+      <% if logged_in? %>
+        <li><%= link_to 'Users', users_path %></li>
+      <% end %>
       <li><%= link_to 'Help', static_pages_help_path %></li>
     </ul>
   </div>

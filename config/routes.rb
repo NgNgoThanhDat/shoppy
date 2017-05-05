@@ -7,8 +7,13 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get 'static_pages/help'
 
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
   root 'static_pages#home'
 
